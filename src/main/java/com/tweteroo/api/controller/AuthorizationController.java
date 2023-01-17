@@ -19,7 +19,7 @@ public class AuthorizationController {
   @PostMapping("/sign-up")
   public String signUp(@RequestBody UserDTO requestBody){
     userRepository.save(new User(requestBody));
-    System.out.println(userRepository.findAll());
+
     return "OK";
   }
 }
