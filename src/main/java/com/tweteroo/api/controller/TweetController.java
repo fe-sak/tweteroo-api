@@ -44,8 +44,8 @@ public class TweetController {
   }
 
   @GetMapping("/{username}")
-  public String readByUser(@PathVariable String username) {
-    // TODO Return all tweets from specified user
-    return "OK";
+  public List<Tweet> readByUser(@PathVariable String username) {
+
+    return tweetRepository.findByUsername(username);
   }
 }
