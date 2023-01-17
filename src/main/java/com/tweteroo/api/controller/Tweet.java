@@ -1,18 +1,18 @@
 package com.tweteroo.api.controller;
 
-import com.tweteroo.api.dto.UserRequestBodyDTO;
+import com.tweteroo.api.dto.TweetRequestBodyDTO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth")
-public class Authorization {
+@RequestMapping("/tweets")
+public class Tweet {
 
-  @PostMapping("/sign-up")
-  public String signUp(@RequestBody UserRequestBodyDTO requestBody){
-    //TODO Add data persistence for user
+  @PostMapping
+  public String create(@RequestBody TweetRequestBodyDTO requestBody) {
+    // TODO Add data persistence for tweet
     return "OK";
   }
 }
