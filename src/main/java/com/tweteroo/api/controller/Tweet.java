@@ -2,6 +2,7 @@ package com.tweteroo.api.controller;
 
 import com.tweteroo.api.dto.TweetRequestBodyDTO;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,12 @@ public class Tweet {
   @GetMapping
   public String read(@RequestParam String page){
     // TODO Return tweets by page
+    return "OK";
+  }
+
+  @GetMapping("/{username}")
+  public String readByUser(@PathVariable String username){
+    // TODO Return all tweets from specified user
     return "OK";
   }
 }
