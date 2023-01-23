@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-.tweteroo-front-api-spring
+tweteroo-front-api-spring
 
 ### STS ###
 .apt_generated
